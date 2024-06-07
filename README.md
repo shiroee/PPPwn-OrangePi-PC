@@ -12,3 +12,11 @@ Thanks to <a href=https://github.com/stooged/PI-Pwn>Stooged</a> for his inspirat
 <a href=http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/details/Orange-Pi-PC.html>Orange PI PC</a>
 
 ![](http://www.orangepi.org/img/img4/banner-PC.jpg)
+
+Arbian <a href=https://mega.nz/file/SckWXZwD#TeG24O-vMnvBcbDO_MmXD5HrvdxCMN3Yzl_5m45OAa4>img download link</a> base on <a href="https://www.armbian.com/orange-pi-pc/">Armbian Bookworm Minimal</a><br>
+You can use <a href=https://etcher.balena.io/>etcher</a> to flash<br>
+Armbian Credentials<br>
+```sh
+user: pipc
+password: pipc
+```
