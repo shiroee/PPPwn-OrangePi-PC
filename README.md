@@ -15,8 +15,16 @@ Thanks to <a href=https://github.com/stooged/PI-Pwn>Stooged</a> for his inspirat
 
 Arbian <a href=https://mega.nz/file/SckWXZwD#TeG24O-vMnvBcbDO_MmXD5HrvdxCMN3Yzl_5m45OAa4>img download link</a> base on <a href="https://www.armbian.com/orange-pi-pc/">Armbian Bookworm Minimal</a><br>
 You can use <a href=https://etcher.balena.io/>etcher</a> to flash<br>
-Armbian Credentials<br>
+Armbian Credentials in modified img<br>
 ```sh
 user: pipc
 password: pipc
+```
+
+Or use Armbian Bookwork Minimal and use this command:
+```sh
+git clone https://github.com/shiroee/PPPwn-OrangePi-PC.git
+cd PPPwn-OrangePi-PC
+chmod +x install.sh
+sudo ./install.sh
 ```

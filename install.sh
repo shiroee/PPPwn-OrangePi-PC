@@ -7,7 +7,7 @@ FW_VERSION="1100"
 #ethernet for orange pi
 INTERFACE="end0"
 # home directory or user
-HOME_DIR="pipc"
+HOME_DIR="$USER"
 # Define the paths for the stage1 and stage2 files based on the firmware version
 STAGE1_FILE="stage1/$FW_VERSION/stage1.bin"
 STAGE2_FILE="stage2/$FW_VERSION/stage2.bin"
