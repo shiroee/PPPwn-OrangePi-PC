@@ -1,13 +1,13 @@
 #!/bin/bash
 
-echo "PPPwn"
+echo -e "Installation of PPPwn Started!"
 
 # Set the firmware version
 FW_VERSION="1100"
 #ethernet for orange pi
 INTERFACE="end0"
 # home directory or user
-HOME_DIR="$USER"
+HOME_DIR=$(echo $SUDO_USER)
 # Define the paths for the stage1 and stage2 files based on the firmware version
 STAGE1_FILE="stage1/$FW_VERSION/stage1.bin"
 STAGE2_FILE="stage2/$FW_VERSION/stage2.bin"
@@ -34,7 +34,7 @@ ifconfig "$INTERFACE" up
 sleep 1
 
 # Change to the directory containing the pppwn executable
-cd /home/"$HOME_DIR"/PPPwn-OrangePi-PC/
+cd /home/$HOME_DIR/PPPwn-OrangePi-PC/
 
 # Execute the pppwn command with the desired options
 ./pppwn --interface "$INTERFACE" --fw \$FW_VERSION --stage1 "\$STAGE1_FILE" --stage2 "\$STAGE2_FILE" -a -t 5 -nw -wap 2
@@ -65,7 +65,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/home/"$HOME_DIR"/PPPwn-OrangePi-PC/pppwn_script.sh
+ExecStart=/home/$HOME_DIR/PPPwn-OrangePi-PC/pppwn_script.sh
 ExecStop=/usr/bin/systemctl poweroff
 
 [Install]
