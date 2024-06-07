@@ -32,7 +32,7 @@ ifconfig "$INTERFACE" up
 sleep 1
 
 # Change to the directory containing the pppwn executable
-cd /root/PPPwn-OrangePi-PC/
+cd /home/shiroe/PPPwn-OrangePi-PC/
 
 # Execute the pppwn command with the desired options
 ./pppwn --interface "$INTERFACE" --fw \$FW_VERSION --stage1 "\$STAGE1_FILE" --stage2 "\$STAGE2_FILE" -a -t 5 -nw -wap 2
@@ -61,7 +61,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/root/PPPwn-OrangePi-PC/pppwn_script.sh
+ExecStart=/home/shiroe/PPPwn-OrangePi-PC/pppwn_script.sh
 
 [Install]
 WantedBy=multi-user.target
