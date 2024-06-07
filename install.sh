@@ -63,6 +63,7 @@ After=network.target
 [Service]
 Type=simple
 ExecStart=/home/pipc/PPPwn-OrangePi-PC/pppwn_script.sh
+ExecStop=/usr/bin/systemctl poweroff
 
 [Install]
 WantedBy=multi-user.target
