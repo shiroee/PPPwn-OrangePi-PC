@@ -1,0 +1,4 @@
+git clone https://github.com/shiroee/PPPwn-OrangePi-PC.git
+cd PPPwn-OrangePi-PC
+chmod +x install.sh
+sudo ./install.sh
