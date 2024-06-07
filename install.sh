@@ -6,6 +6,8 @@ echo "PPPwn"
 FW_VERSION="1100"
 #ethernet for orange pi
 INTERFACE="end0"
+# home directory or user
+HOME_DIR="pipc"
 # Define the paths for the stage1 and stage2 files based on the firmware version
 STAGE1_FILE="stage1/$FW_VERSION/stage1.bin"
 STAGE2_FILE="stage2/$FW_VERSION/stage2.bin"
@@ -32,20 +34,21 @@ ifconfig "$INTERFACE" up
 sleep 1
 
 # Change to the directory containing the pppwn executable
-cd /home/pipc/PPPwn-OrangePi-PC/
+cd /home/"$HOME_DIR"/PPPwn-OrangePi-PC/
 
 # Execute the pppwn command with the desired options
 ./pppwn --interface "$INTERFACE" --fw \$FW_VERSION --stage1 "\$STAGE1_FILE" --stage2 "\$STAGE2_FILE" -a -t 5 -nw -wap 2
 
 # Check if the pppwn command was successful
 if [ \$? -eq 0 ]; then
-    echo "pppwn execution completed successfully."
+    echo -e "Your PS4 has been PPPwned!"
     systemctl stop pppwn.service
     sleep 20
+    echo -e "Device will now shutdown."
     ifconfig "$INTERFACE" down
     systemctl poweroff
 else
-    echo "pppwn execution failed. Exiting script."
+    echo "PPPwn execution failed. Exiting script."
     exit 1
 fi
 EOL
@@ -62,7 +65,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/home/pipc/PPPwn-OrangePi-PC/pppwn_script.sh
+ExecStart=/home/"$HOME_DIR"/PPPwn-OrangePi-PC/pppwn_script.sh
 ExecStop=/usr/bin/systemctl poweroff
 
 [Install]
@@ -74,6 +77,6 @@ sudo mv pppwn.service /etc/systemd/system/
 sudo chmod +x /etc/systemd/system/pppwn.service
 sudo systemctl enable pppwn.service
 
-echo "install completed! Rebooting..."
-
+echo -e "Install Complete!"
+echo -e "Device will now reboot."
 sudo reboot
