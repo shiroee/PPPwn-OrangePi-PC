@@ -43,7 +43,7 @@ if [ \$? -eq 0 ]; then
     systemctl stop pppwn.service
     sleep 20
     ifconfig "$INTERFACE" down
-    poweroff
+    systemctl poweroff
 else
     echo "pppwn execution failed. Exiting script."
     exit 1
