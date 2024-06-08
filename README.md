@@ -21,7 +21,11 @@ user: pipc
 password: pipc
 ```
 
-Or use Armbian Bookwork Minimal and use this command:
+Or use Armbian Bookwork Minimal after you complete the setup you need to
+```sh
+sudo reboot
+```
+then use this command:
 ```sh
 git clone https://github.com/shiroee/PPPwn-OrangePi-PC.git
 cd PPPwn-OrangePi-PC
