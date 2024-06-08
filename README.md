@@ -32,3 +32,5 @@ cd PPPwn-OrangePi-PC
 chmod +x install.sh
 sudo ./install.sh
 ```
+<br/>
+If your ps4 pppwned this device will power off.
