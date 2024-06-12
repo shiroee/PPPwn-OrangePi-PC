@@ -17,18 +17,18 @@ Use <a href="https://www.armbian.com/orange-pi-pc/">Armbian Bookworm Minimal</a>
 You can use <a href=https://etcher.balena.io/>etcher</a> to flash<br>
 You can access your device using ssh or connect hdmi to your device.<br/>
 If you want to access via ssh you need to download <a href=https://www.putty.org/>putty</a>.<br/>
-Then connect your device to your router. Open your putty and follow this steps:
-![](https://github.com/shiroee/PPPwn-OrangePi-PC/blob/main/img/0.png)
-Use hostname `orangepipc` or your device IP
-![](https://github.com/shiroee/PPPwn-OrangePi-PC/blob/main/img/1.png)
-Then click Accept
+Then connect your device to your router. Open your putty and follow this steps:<br/>
+![](https://github.com/shiroee/PPPwn-OrangePi-PC/blob/main/img/0.png)<br/>
+Use hostname `orangepipc` or your device IP<br/>
+![](https://github.com/shiroee/PPPwn-OrangePi-PC/blob/main/img/1.png)<br/>
+Then click Accept<br/>
 `login as: root`<br/>
 `password: 1234` <br>
-Then create your own password and user.
-![](https://github.com/shiroee/PPPwn-OrangePi-PC/blob/main/img/2.png)
-In Set user language type `n` then enter `330` to skip generating locales
-![](https://github.com/shiroee/PPPwn-OrangePi-PC/blob/main/img/3.png)
-Then install git
+Then create your own password and user.<br/>
+![](https://github.com/shiroee/PPPwn-OrangePi-PC/blob/main/img/2.png)<br/>
+In Set user language type `n` then enter `330` to skip generating locales<br/>
+![](https://github.com/shiroee/PPPwn-OrangePi-PC/blob/main/img/3.png)<br/>
+Then install git<br/>
 ```sh
 apt install git
 sudo reboot
