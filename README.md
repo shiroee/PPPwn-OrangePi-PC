@@ -20,8 +20,8 @@ You can use <a href=https://etcher.balena.io/>etcher</a> to flash<br>
 You can access your device using ssh or connect hdmi to your device.<br/>
 If you want to access via ssh you need to download <a href=https://www.putty.org/>putty</a>.<br/>
 Then connect your device to your router. Open your putty and follow this steps:<br/>
-![](https://github.com/shiroee/PPPwn-OrangePi-PC/blob/main/img/0.png)<br/>
 1. Use hostname `orangepipc` or your device IP<br/>
+![](https://github.com/shiroee/PPPwn-OrangePi-PC/blob/main/img/0.png)<br/>
 ![](https://github.com/shiroee/PPPwn-OrangePi-PC/blob/main/img/1.png)<br/>
 Then click Accept<br/>
 `login as: root`<br/>
